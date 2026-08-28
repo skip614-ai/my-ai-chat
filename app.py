@@ -1,6 +1,7 @@
 import streamlit as st
 from google import genai
-
+   import os
+   os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
 st.title("My AI Chat")
 
 client = genai.Client()
